@@ -125,6 +125,6 @@ meanPerSubjectActivityData <- dcast(tidyData, Subject + Activity ~ variable, mea
 names(meanPerSubjectActivityData)[3:81] <- paste("Mean of ", names(meanPerSubjectActivityData)[3:81])
 
 # Write the output to a text file with a tab separator and and remove the row names
-write.table(meanPerSubjectActivityData, "UCI HAR output.txt", sep = "\t", row.names = FALSE)
+write.table(meanPerSubjectActivityData, "UCI HAR output.txt", sep = "\t", row.names = FALSE, col.names = TRUE)
 
 
